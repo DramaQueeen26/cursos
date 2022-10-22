@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		img{
+			margin: 0 20px;
+			width: 170px;
+			height: 140px;
+		}
+		#contenedor{
+			width: 75%;
+			margin: auto;
+		}
+	</style>
+	<script src="Jquery/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			document.getElementById("mybutton").addEventListener("click", cambiar, false);
+		});
+		
+		function cambiar(){
+			//$("img").fadeOut(1000).fadeIn(1000).width("180");
+			
+			$("img").each(function(){
+				$(this).fadeOut(1000).fadeIn(1000).width("200");
+			});
+		}
+	</script>
+</head>
+<body>
+	<div id="contenedor">
+		<img src="img/large.jpg">
+		<img src="img/large.jpg">
+		<img src="img/large.jpg">
+		<img src="img/large.jpg">
+	</div>
+	<div id="button">
+		<input type="button" id="mybutton" value="Press">
+	</div>
+</body>
+</html>

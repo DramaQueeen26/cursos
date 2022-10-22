@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		h1{
+			text-align: center;
+		}
+		img{
+			padding: 0 5px;
+			width: 200px;
+			height: 150
+		}
+		table{
+			text-align: center;
+			border: none;
+			width: 50%;
+			margin: auto;
+		}
+	</style>
+	<script src="Jquery/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var elementos=document.querySelectorAll("img");
+			
+			for (var i=0; i<elementos.length; i++){
+				elementos[i].addEventListener("mouseover", cambiar, false);
+			}
+		});
+		
+		function cambiar(e){
+			if(e.target==img1){
+				$("#img1").attr("src", "img/nirvana.jpg")
+			}else if(e.target==img2){
+				$("#img2").attr("src", "img/obey.jpg")
+			}else if(e.target==img3){
+				$("#img3").attr("src", "img/th.jpeg")
+			}else if(e.target==img4){
+				$("#img4").attr("src", "img/large.jpg")
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Galería de imágenes</h1>
+	<table width="100%" border="0">
+		<tr>
+			<td><img src="img/large.jpg" id="img1"></td>
+			<td><img src="img/nirvana.jpg" id="img2"></td>
+			<td><img src="img/obey.jpg" id="img3"></td>
+			<td><img src="img/th.jpeg" id="img4"></td>
+		</tr>
+	</table>
+</body>
+</html>

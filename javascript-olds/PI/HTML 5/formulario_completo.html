@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		table{
+			text-align: center;
+			background-color: blue;
+			width: 25%;
+			margin: auto;
+			border: 2px red dashed;
+			border-radius: 20px;
+		}
+
+		td{
+			padding: 10px;
+		}
+	</style>
+
+
+	<script>
+		function comenzar (){
+			var name=document.getElementById("name");
+			var last_name=document.getElementById("last_name");
+
+			name.addEventListener("input", validity, false);
+			last_name.addEventListener("input", validity, false);
+
+			validity();
+		}
+		
+		function validity (){
+			if(name.value=="" && last_name.value==""){
+				name.setCustomValidity("Introduce nombre o apellido");
+				name.style.background="#FFDDDD";
+				last_name.style.background="#FFDDDD";
+			}
+
+			else{
+				name.setCustomValidity("");
+				name.style.background="#FFFFFF";
+				last_name.style.background="#FFFFFF";
+			}
+		}
+
+		window.addEventListener("load", comenzar, false);
+	</script>
+</head>
+<body>
+
+<form name="form" method="get">
+	<table>
+	<tr>
+		<td>Nombre:</td><td><input type="text" name="name" id="name"></td> 
+	</tr>
+	<tr>
+		<td>Apellido:</td><td><input type="text" name="last_name" id="last_name"></td>
+	</tr>
+	<tr>
+		<td>Edad:</td><td><input type="number" name="age" min="18" max="25"></td>	
+	</tr>
+	<tr>
+		<td><input type="submit" name="submit" value="Submit"></td>
+	</tr>
+</table>
+</form>
+
+
+</body>
+</html>

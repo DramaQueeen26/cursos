@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Formulario</title>
+	<link rel="stylesheet" href="">
+</head>
+<script>
+	function pasar(valor){
+		document.getElementById("text").value = valor.value;
+	}
+</script>
+<body>
+	<form>
+		<input type="number" onchange="pasar(this);">
+		<input type="date" onchange="pasar(this);">
+		<br>
+		<input type="text" id="text">
+	</form>
+</body>
+</html>

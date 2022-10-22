@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="Jquery/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("html").dblclick(function(){
+				alert("Ay");
+			});
+			$("a").mouseover(function(){
+				var mensaje="<p>Estás pasando el ratón por encima</p>";
+				$("#principal").append(mensaje);
+			});
+			$("#button").click(function(){
+				$(this).val("Has hecho click");
+			});
+			$("#text").focus(function(){
+				$(this).val("Ahora vas a escribir aquí");
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="principal">
+		<h1>Introducción a Eventos</h1>
+		<p><a href="#">Link</a></p>
+		<form action="#" method="get">
+			<fieldset>
+				<legend>Formulario</legend>
+				<p><input type="button" name="button" id="button" value="Botón"></p>
+				<p><input type="text" name="textfield" id="text"></p>
+			</fieldset>
+		</form>
+	</div>
+</body>
+</html>

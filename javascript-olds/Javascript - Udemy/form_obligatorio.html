@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Formulario</title>
+	<link rel="stylesheet" href="">
+	<style>
+		.campos{
+			background-color: #fff;
+			color: #000;
+			border: 1px solid #6e6e6e;
+			height: 30px;
+		}
+		.error{
+			background-color: orange;
+			color: #000;
+			border: 1px solid red;
+			height: 30px;
+		}
+	</style>
+</head>
+<script>
+	function validar(valor){
+		if(valor.value ==""){
+			valor.className = "error";
+		}else{
+			valor.className = "campos";
+		}
+	}
+	function validarNumeros(valor){
+		if(valor.value ==""){
+			valor.className = "error";
+		}else{
+			if(isNaN(valor.value)){
+				valor.className = "error";
+			}else{
+
+			valor.className = "campos";
+			}
+		}
+	}
+	function longitud(valor, min){
+		if(valor.value.length < min){
+			valor.className = "error";
+		}else{
+			valor.className = "campos";
+		}
+	}
+</script>
+<body>
+	<form>
+		<input type="text" onblur="validar(this); longitud(this, 3);" class="campos" placeholder="Nombre">
+		<p></p>
+		<input type="text" onblur="validar(this);" class="campos" placeholder="Correo">
+		<p></p>
+		<input type="text" onblur="validarNumeros(this);" class="campos" placeholder="Edad">
+		<p></p>
+		<input type="text" onblur="validar(this); longitud(this, 10)" class="campos" placeholder="Mensaje">
+		<p></p>
+		<input type="submit" class="campos">
+	</form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mostrar y Ocultar</title>
+	<script src="jquery.js"></script>
+</head>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+		var caja = $('#caja');
+
+		$('#Mostrar').click(function(){
+			caja.show();
+		});
+
+		$('#Ocultar').click(function(){
+			caja.hide();
+		});
+		
+	});
+</script>
+<body>
+	<button id="Mostrar">Mostrar</button>
+	<button id="Ocultar">Ocultar</button>
+	<section id="caja" style="width:300px;height:200px;background:red;"></section>
+</body>
+</html>

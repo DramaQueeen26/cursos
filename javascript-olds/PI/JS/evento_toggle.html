@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#menu-principal{
+			width: 750px;
+			margin: auto;
+			margin-top: 100px;
+		}
+		#submenu{
+			position: absolute;
+			left: 307px;
+			top: 136px;
+			width: 200px;
+			height: 131px;
+			z-index: 1;
+		}
+		li{
+			float: left;
+			width: 200px;
+			list-style: none;
+			margin: 0 10px;
+			text-align: center;
+			border: solid 2px #000;
+		}
+		li a{
+			border: 2px thin;
+			display: block;
+			font-size: 24px;
+			font-weight: bold;
+			padding: 10px 30px;
+			text-decoration: none;
+			background-color: #1e5799;
+			color: #FFF;
+		}
+	</style>
+	<script src="Jquery/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#submenu").hide();
+			$(".archivo").toggle(sw, hd);
+                  
+		});
+          function sw(){
+              $("#submenu").show();
+          }
+          function hd(){
+              $("#submenu").hide();
+          }
+	</script>
+</head>
+<body>
+	<div id="submenu">
+		<ul>
+			<li id="opcion1"><a href="#">Opción 1</a></li>
+			<li id="opcion2"><a href="#">Opción 2</a></li>
+			<li id="opcion3"><a href="#">Opción 3</a></li>
+		</ul>
+	</div>
+	<div id="menu-principal">
+		<ul>
+			<li class="archivo"><a href="#">Archivo</a></li>
+			<li><a href="#">Edición</a></li>
+			<li><a href="#">Herramientas</a></li>
+		</ul>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="Jquery/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var ventana=open("http://cryptodrops.club", "Crypto Drops", "width=300, height=200, left=300");
+        $("#botonCerrar").click(function(e){
+            ventana.close();
+            e.preventDefault();
+        });
+    });
+</script>
+</head>
+
+<body>
+<a href="http://www.pildorasinformaticas.es">Ir a Píldoras</a>
+<br><br><br>
+<a href="" id="botonCerrar">Cerrar</a>
+</body>
+</html>

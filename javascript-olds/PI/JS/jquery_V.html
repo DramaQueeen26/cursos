@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		table{
+			text-align: center;
+			border-collapse: collapse;
+			margin-bottom: 10px;
+		}
+		td{
+			height: 50px;
+		}
+		#clasico{
+			background-color: firebrick;
+			color: white;
+		}
+		#alternativo{
+			background-color: blue;
+			color: white;
+		}
+		#metal{
+			background-color: black;
+			color: white;
+		}
+		#indie{
+			background-color: orange;
+		}
+		#link{
+			margin: auto;
+			text-align: center;
+			width: 50%;
+			border: 1px solid #000;
+		}
+		a{
+			font-size: 25px;
+			text-decoration: none;
+			color: darkgray;
+		}
+		.link_clasico{
+			color: firebrick;
+		}
+		.link_alternativo{
+			color: blue;
+		}
+		.link_metal{
+			color: black;
+		}
+		.link_indie{
+			color: orange;
+		}
+	</style>
+	<script src="Jquery/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			document.getElementById("clasico").addEventListener("click", link_clasico, false);
+			document.getElementById("alternativo").addEventListener("click", link_alternativo, false);
+			document.getElementById("metal").addEventListener("click", link_metal, false);
+			document.getElementById("indie").addEventListener("click", link_indie, false);
+		});
+		
+		function link_clasico(){
+			/*$(".alternativo").removeClass("link_alternativo");
+			$(".metal").removeClass("link_metal");
+			$(".indie").removeClass("link_indie");
+			$(".clasico").addClass("link_clasico");*/
+			
+			$(".clasico").toggleClass("link_clasico");
+		}
+		function link_alternativo(){
+			/*$(".clasico").removeClass("link_clasico");
+			$(".metal").removeClass("link_metal");
+			$(".indie").removeClass("link_indie");
+			$(".alternativo").addClass("link_alternativo");¨*/
+			
+			$(".alternativo").toggleClass("link_alternativo");
+		}
+		function link_metal(){
+			/*$(".alternativo").removeClass("link_alternativo");
+			$(".clasico").removeClass("link_clasico");
+			$(".indie").removeClass("link_indie");
+			$(".metal").addClass("link_metal");*/
+			
+			$(".metal").toggleClass("link_metal");
+		}
+		function link_indie(){
+			/*$(".alternativo").removeClass("link_alternativo");
+			$(".metal").removeClass("link_metal");
+			$(".clasico").removeClass("link_clasico");
+			$(".indie").addClass("link_indie");*/
+			
+			$(".indie").toggleClass("link_indie");
+		}
+	</script>
+</head>
+<body>
+	<table width="100%" border="1">
+		<tr>
+			<td><strong>Rock</strong></td>
+			<td>Clásico <input type="checkbox" id="clasico" value="Clásico"></td>
+			<td>Alternativo <input type="checkbox" id="alternativo" value="Alternativo"></td>
+			<td>Metal <input type="checkbox" id="metal" value="Metal"></td>
+			<td>Indie <input type="checkbox" id="indie" value="Indie"></td>
+		</tr>
+	</table>
+	<div id="link">
+		<a href="#" class="clasico">Aerosmith</a><br>
+		<a href="#" class="clasico">Boston</a><br>
+		<a href="#" class="alternativo">Green Day</a><br>
+		<a href="#" class="clasico">Chicago</a><br>
+		<a href="#" class="clasico">A-ha</a><br>
+		<a href="#" class="alternativo">Blink-182</a><br>
+		<a href="#" class="alternativo">Hoobastank</a><br>
+		<a href="#" class="indie">Arctic Monkeys</a><br>
+		<a href="#" class="metal">Metallica</a><br>
+		<a href="#" class="metal">Slikpnot</a><br>
+		<a href="#" class="clasico">The Cranberries</a><br>
+		<a href="#" class="clasico">Four Non Blondes</a><br>
+		<a href="#" class="metal">System of a Down</a><br>
+		<a href="#" class="alternativo">Evanescence</a><br>
+		<a href="#" class="alternativo">Linkin Park</a><br>
+		<a href="#" class="alternativo">3 Doors Down</a><br>
+		<a href="#" class="alternativo">Nickelback</a><br>
+	</div>
+</body>
+</html>

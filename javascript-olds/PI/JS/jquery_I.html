@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="Jquery/jquery.min.js"></script>
+	<!--<script>
+		$(document).ready(function(){
+			$("#carrete img").hide();
+		});
+	
+	
+	</script>-->
+	<style>
+		.anuncio{
+			background-color: #000;
+			color: #FFF;
+			font-size: 24px;
+		}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$("#anuncio").width(500).height(500).text("¡VENDE!").hide().fadeIn(10000)u;
+		});
+	</script>
+</head>
+<body>
+	<!--<div id="carrete">
+		<img src="img/large.jpg" alt="Guns" width="250" height="175"> &nbsp;
+		<img src="img/large.jpg" alt="Guns" width="250" height="175"> &nbsp;
+		<img src="img/large.jpg" alt="Guns" width="250" height="175"> &nbsp;
+		<img src="img/large.jpg" alt="Guns" width="250" height="175"> &nbsp;
+	</div>-->
+	<!--<script>
+		var imagenes=document.querySelectorAll("#carrete img");
+		
+		for(var i=0; i<imagenes.length; i++){
+			imagenes[i].style.visibility="hidden";
+		}
+	</script>-->
+	
+	<div id="anuncio">
+		¡COMPRA!
+	</div>
+	<!--<script>
+		var anuncio=document.getElementById("anuncio");
+		anuncio.style.backgroundColor="#000";
+		anuncio.style.color="#FFF";
+		anuncio.style.width="500px";
+		anuncio.style.height="500px";
+		anuncio.innerHTML="¡VENDE!"
+	</script>-->
+</body>
+</html>

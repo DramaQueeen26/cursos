@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var aleatorio=Math.round(Math.random()*100);//Round redondea un numero, lo pone entero.
+        var minum, intentos;
+        minum=0;
+        intentos=0;
+
+        do{
+            minum=prompt("Introduce un número entre 0 y 100");
+            if(aleatorio>minum){
+                alert("Más alto");
+            }
+
+            if(aleatorio<minum){
+                alert("Más bajo");
+            }
+            intentos++;
+        }while(aleatorio!=minum);
+        
+        alert("Correcto. Has consumido " + intentos + " intentos");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

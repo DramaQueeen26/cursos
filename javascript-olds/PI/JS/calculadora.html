@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var num1=prompt("Número 1");
+        var num2=prompt("Número 2");
+
+        if(!isNaN(num1) && !isNaN(num2)){//Si no es un número
+
+
+
+            // alert(typeof(num1)); //Devuelve el tipo de texto.
+            var operacion=prompt("Operación");
+
+            if(operacion=="suma"){
+                alert(parseInt(num1)+parseInt(num2)); //Pone el string en entero
+            } else if(operacion=="resta"){
+                alert(parseInt(num1)-parseInt(num2));
+            } else if(operacion=="multiplicación" || operacion=="multiplicacion"){
+                alert(parseInt(num1)*parseInt(num2));
+            } else if(operacion=="división" || operacion=="division"){
+                alert(parseInt(num1)/parseInt(num2));
+            }else{
+                alert("Operación no contemplada");
+            }
+        }else{
+            if(typeof(num1=="string") || typeof(num2=="string")){ //evalua si es string o numerico
+                alert("Has introducido valores númericos");
+            }else{
+                alert("Ha ocurrido un error no identificado");
+            }
+            alert("No has introducido un número");
+        }
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

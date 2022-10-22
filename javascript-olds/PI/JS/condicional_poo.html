@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table{margin:auto;}
+    </style>
+</head>
+<body id="cuerpo">
+    <form action="" name="form" id="form" method="post">
+        <table width="25%" border="1" id="tabla">
+            <tr>
+                <td>Nombre:</td>
+                <td><label for="textfield"></label><input type="text" name="textfield" id="textfield"></td>
+            </tr>
+            <tr>
+                <td>Apellido:</td>
+                <td><label for="textfield2"></label><input type="text" name="textfield2" id="textfield2"></td>
+            </tr>
+            <tr>
+                <td>Edad:</td>
+                <td><label for="textfield3"></label><input type="text" name="textfield3" id="textfield3"></td>
+            </tr>
+            <tr>
+                <td><textarea name="" id="" cols="30" rows="10">Texto aquí...</textarea></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Enviar" name="button" id="button"></td>
+                <td><input type="reset" value="Restablecer" name="button2" id="button2"></td>
+            </tr>
+
+        </table>
+    </form>
+
+    <script>
+        var cuerpo=document.getElementById("cuerpo");
+        var colorWeb=prompt("Introduce el color de fondo. Azul/Verde/Rojo") .toLowerCase();
+
+        // if(colorWeb=="azul"){
+        //     cuerpo.style.backgroundColor="blue";
+        // }else if(colorWeb=="rojo"){
+        //     cuerpo.style.backgroundColor="red";
+        // }else if(colorWeb=="verde"){
+        //     cuerpo.style.backgroundColor="green";
+        // }else{
+        //     alert("El color no está contemplado");
+        // }
+
+        if(colorWeb!="azul" && colorWeb!="verde" && colorWeb!="rojo"){
+            alert("Ese color no está contemplado");
+        }else if(colorWeb=="azul"){
+            cuerpo.style.backgroundColor="blue";
+        }else if(colorWeb=="rojo"){
+            cuerpo.style.backgroundColor="red";
+        }else if(colorWeb=="verde"){
+            cuerpo.style.backgroundColor="green";
+        }
+    </script>
+</body>
+</html>

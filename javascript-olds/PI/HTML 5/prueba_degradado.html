@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    
+    <style>
+        section{
+            width: 500px;
+            margin: auto;
+        }
+    
+    </style>
+    <script>
+    function comenzar(){
+        var elemento=document.getElementById("lienzo");
+
+        lienzo=elemento.getContext("2d");
+
+        /*var degradado=lienzo.createLinearGradient(0, 150, 500, 150);*/
+
+        var degradado=lienzo.createRadialGradient(250, 150, 50, 250, 150, 300);
+
+        degradado.addColorStop(1, "#f80a0a");
+        degradado.addColorStop(0, "#09fe03"); 
+
+        lienzo.fillStyle=degradado;
+        lienzo.fillRect(0, 0, 500, 300);
+    }
+
+
+    
+    window.addEventListener("load", comenzar, false);
+    </script>
+
+</head>
+<body>
+    <section>
+        <canvas id="lienzo" width="500" height="300">
+            Su navegador no soporta el elemento canvas.
+        </canvas>
+    </section>
+</body>
+</html>

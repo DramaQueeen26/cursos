@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#title{
+			margin-left: 150px;
+		}
+		#foto p{
+			background-color: #000;
+			color: #FFF;
+			font-size: 24px;
+			text-align: center;
+			font-weight: bold;
+			width: 300px;
+		}
+		h1{
+			text-align: center;
+		}
+	</style>
+	<script src="Jquery/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#title").hide();
+			$("#foto img").width(60).height(40).click(function(){
+				$(this).animate({marginLeft:"150px", width:"300px", height:"200px"}, 2000, function(){
+					$("#title").fadeIn(1000).delay(2000).fadeOut(1000);
+				});
+				$(this).delay(2500).animate({marginLeft:"0px", width:"60px", height:"40px"}, 2000,)
+			});
+		});
+		
+		/*Se puede poner un plugin en la tercera función de animate. EJ: "easeOutBounce" o "easeInside"*/
+	</script>
+</head>
+<body>
+	<h1>Imágen</h1>
+	<div id="foto">
+		<img src="imgs/1.jpg" width="300" height="200" id="img">
+		<p id="title">Árbol</p>
+	</div>
+</body>
+</html>

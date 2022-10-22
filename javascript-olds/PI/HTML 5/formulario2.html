@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		table{
+			text-align: center;
+			background-color: blue;
+			width: 25%;
+			margin: auto;
+			border: 2px red dashed;
+			border-radius: 20px;
+		}
+
+		td{
+			padding: 10px;
+		}
+	</style>
+
+</head>
+
+
+
+	<script>
+		var age;
+
+		function comenzar (){
+			age=document.getElementById("age");
+			age.addEventListener("change", change_range, false);
+
+			document.dates.addEventListener("invalid", validity, true);
+			document.getElementById("submit").addEventListener("click", send, false);
+			document.dates.addEventListener("input", validar_tiempo, false);
+		}
+
+		function change_range(){
+			var range document.getElementById("range");
+
+			var calculo=edad.value-30;
+
+			if(calculo<30){
+				calculo=0;
+
+				edad.value=30;
+			}
+
+			range.innerHTML=calculo+" a "+edad.value; 
+		}
+
+		function validity(e){
+				var elemnt=e.target;
+				elemnt.style.background="#FFDDDD"
+		}
+
+		function send(){
+			var correct=document.dates.checkValidity();
+
+			if(correct==true){
+				document.dates.submit();
+				}
+		}
+
+
+		function validar_tiempo(e){
+			var element=e.target;
+			if(element.validity.valid==true){
+				element.style.background="#FFFFFF";
+		}else{
+			element.style.background="#FFDDDD";
+		}
+
+		window.addEventListener("load", comenzar, false);
+	</script>
+
+<body>
+
+<form name="dates" method="get">
+<table>
+	<tr>
+		<td>Usuario:</td><td><input type="text" name="user" id="user" maxlength="10" required></td> 
+	</tr>
+	<tr>
+		<td>E-mail:</td><td><input type="email" name="email" id="email" required></td>
+	</tr>
+	<tr>
+		<td>Edad:</td><td><input type="range" name="age" id="age" min="0" max="120" value="30"></td>	
+	</tr>
+	<tr>
+		<td><output name="range" id="range" >0 a 30</output></td>
+	</tr>
+	<tr>
+		<td><input type="submit" name="submit" value="Submit" id="submit"></td>
+	</tr>
+</table>
+
+
+
+</body>
+</html>

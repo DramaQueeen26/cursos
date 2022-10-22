@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Formularios I</title>
+<style>
+
+body{
+	background-color:#FFC;
+}
+
+#principal{
+	
+	padding:10px 10px 10px 50px;
+	background-color:#F93;	
+	box-shadow: 10px 10px 5px 0px #999999;
+	border-radius: 10px;
+}
+
+td{
+	padding-bottom:25px;
+}
+h1{
+	text-align:center;
+}
+
+</style>
+<script src="Jquery/jquery.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+            $("#nombre").focus(function(){
+                var campo=$(this);
+                if(campo.val==campo.attr("value")){
+                    campo.val("");
+                }
+            });
+		$("#form_datos").submit(function(){
+                if($("#nombre").val()==""){
+                    alert("Por favor, completa el nombre");
+                    $("#nombre").focus();
+                    return false;
+                }
+            });
+          $("#edad").blur(function(){
+              var edad=$(this).val();
+              if(isNaN(edad)){
+                alert("Por favor introduce una edad real");
+                  $(this).focus();
+                  $(this).val("");
+              }
+          });
+          var array=new Array();
+          var i=0;
+          $(":checkbox").click(function(){
+              array[i]=$(this).val();
+              //alert("Posición " + i + " " + array[i]);
+              $("#aficiones").append(array[i] + "<br>");
+              i++;
+          });
+          $("#pais").change(function(){
+              alert("Pais de residencia " + $(this).val());
+          });
+	});
+</script>
+</head>
+
+<body>
+<h1>Envío de datos</h1>
+<div id="contenedor">
+<form id="form_datos">
+  <table width="20%" border="0" align="center" id="principal">
+    <tr>
+      <td>Nombre:</td>
+      <td><label for="nombre"></label>
+        <input type="text" name="nombre" id="nombre" placeholder="Obligatorio"></td>
+    </tr>
+    <tr>
+      <td>Apellido:</td>
+      <td><input type="text" name="apellido" id="apellido"></td>
+    </tr>
+    <tr>
+      <td>Edad:</td>
+      <td><input type="text" name="edad" id="edad"></td>
+    </tr>
+    <tr>
+      <td>Género:</td>
+      <td><p>
+        <label>
+          <input type="radio" name="genero" value="Masculino" id="masculino">
+          masculino</label>
+        <br>
+        <label>
+          <input type="radio" name="genero" value="Femenino" id="femenino">
+          femenino</label>
+        <br>
+      </p></td>
+    </tr>
+    <tr>
+      <td>País:</td>
+      <td><label for="pais"></label>
+        <select name="pais" id="pais">
+            <option>Venezuela</option>
+            <option>España</option>
+            <option>México</option>
+            <option>Colombia</option>
+            <option>Perú</option>
+            <option>Chile</option>
+            <option>Argentina</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td>Aficiones:</td>
+      <td><table width="200">
+        <tr>
+          <td><label>
+            <input type="checkbox" name="deporte" value="Deporte" id="deporte">
+            Deporte</label></td>
+          <td><label>
+            <input type="checkbox" name="informatica" value="Informática" id="informatica">
+            Informática</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="checkbox" name="lectura" value="Lectura" id="lectura">
+            Lectura</label></td>
+          <td><label>
+            <input type="checkbox" name="cine" value="Cine" id="cine">
+            Cine</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="checkbox" name="bares" value="Bares" id="bares">
+            Bares</label></td>
+          <td><label>
+            <input type="checkbox" name="naturaleza" value="Naturaleza" id="naturaleza">
+            Naturaleza</label></td>
+        </tr>
+       
+      </table></td>
+    </tr>
+    <tr>
+    <td colspan="2" align="center"><input type="submit" value="Enviar" id="enviar"></td>
+   
+    </tr>
+  </table>
+  </form>
+</div>
+<div id="aficiones"></div>
+</body>
+</html>

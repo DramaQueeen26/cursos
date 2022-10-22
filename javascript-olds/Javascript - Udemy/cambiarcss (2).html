@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cambiar CSS</title>
+	<script src="jquery.js"></script>
+</head>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+		var caja = $('#caja');
+		var boton = $('button');
+
+		boton.click(Cambiar);
+
+		function Cambiar(){
+			caja.css({
+				'background':'blue',
+				'width':'200px',
+				'height':'200px'
+			});
+		}
+
+	});
+</script>
+<body>
+	<button>Cambiar CSS</button>
+	<section id="caja" style="width:400px;height:400px;background:red;"></section>
+</body>
+</html>

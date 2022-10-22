@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#imagen2{
+			opacity: 0.5;
+		}
+	</style>
+	<script src="Jquery/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#imagen").click(function(){
+				$(this).animate({marginLeft:"+=50px"}, 100);
+			});
+			
+			$("#imagen2").mouseover(function(){
+				$(this).animate({opacity:1}, 500);
+			});
+			$("#imagen2").mouseout(function(){
+				$(this).animate({opacity:0.5}, 500);
+			});
+			
+			/*Con píxeles se ponen comillas, si no tiene píxiles no se pone comillas*/
+			/*Animate se usa solamente con propiedades CSS que admita números*/
+		});
+	</script>
+</head>
+<body>
+	<img src="img/nirvana.jpg" width="300" height="200" id="imagen"><br>
+	<img src="imgs/1.jpg" width="300" height="200" id="imagen2">
+</body>
+</html>

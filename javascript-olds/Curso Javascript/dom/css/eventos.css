@@ -1,0 +1,39 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+body{
+	text-align: center;
+	margin: 50px;
+}
+
+.contenedor{
+	display: inline-block;
+	width: 400px;
+}
+
+.input-mitad{
+	width: 49%;
+	float: left;
+	margin-right: 0.5%;
+	margin-bottom: 20px;
+}
+
+.input-mitad input{
+	width: 100%;
+	padding: 10px 20px;
+}
+
+.color{
+	margin-top: 20px;
+}
+
+.color p{
+	margin-bottom: 20px;
+	font-weight: bold;
+	font-size: 22px;
+}
+
+.radio{
+	width: 33.33%;
+	text-align: center;
+	float: left;
+}

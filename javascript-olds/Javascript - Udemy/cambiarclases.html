@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Cambiar clases</title>
+	<link rel="stylesheet" href="">
+	<style>
+		.caja1{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+		.caja2{
+			width: 200px;
+			height: 200px;
+			background-color: blue;
+		}
+	</style>
+	<script>
+		function cambiar(){
+			var elemento = document.getElementById("caja");
+
+			if(elemento.className == "caja1"){
+				elemento.className = "caja2";
+			}else{
+				elemento.className = "caja1";
+			}
+		}
+	</script>
+</head>
+<body>
+	<button onclick="cambiar();">Cambiar clase</button>
+	<section id="caja" class="caja1">
+		
+	</section>
+</body>
+</html>

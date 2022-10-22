@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#banner{
+			background-color: #F00;
+			width: 450px;
+			height: 300px;
+			position: absolute;
+			left: 400px;
+			top: 50px;
+			font-size: 56px;
+			text-align: center;	
+		}
+	</style>
+	<script src="Jquery/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			/*var z=document.getElementById("cerrar");
+			z.addEventListener("click", cerrar_banner, false);*/
+			
+			document.getElementById("cerrar").addEventListener("click", cerrar_banner, false);
+		});
+		
+		function cerrar_banner(){
+			$("#banner").remove();
+			/*replaceWith: reemplaza contenido*/
+		}
+	</script>
+</head>
+<body>
+	<div id="banner">
+		Banner de prueba
+		<p id="cerrar">Cerrar</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Reemplazar Alert</title>
+	<link rel="stylesheet" href="">
+	<style>
+		#alertar{
+			display: none;
+			background: #6e6e6e;
+			color: #f2f2f2;
+			padding: 6px;
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			font: bold 20px Verdana;
+		}	
+	</style>
+</head>
+<script>
+	function alertar(mensaje){
+		var section = document.getElementById("alertar");
+		section.style.display = "block";
+		section.innerHTML = mensaje;
+	}
+</script>
+<body>
+	<button onclick="alertar('Has generado un mensaje')">Generar</button>
+	<section id="alertar">slmda</section>
+</body>
+</html>
