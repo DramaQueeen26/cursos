@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+*{
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
+}
+
+html{
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
+	background-color: #D5F7E6;
+}
+
+main{
+	background-color: white;
+}
+
+section{
+	padding: 0px 40px !important;
+}
+
+#header{
+	background-image: url("../img/img1.png");
+	background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 93vh;
+    opacity: .8; 
+}
+
+#header2{
+	background-image: url("../img/img2.png");
+	background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 93vh;
+    opacity: .8;
+}
+.nav{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.nav .card-panel{
+	font-size: 20px !important;
+	text-shadow: 1px 1px 3px #D5F7E6;
+	font-weight: bold;
+	width: 350px;
+	text-align: center;
+}
+
+#contenido{
+	padding: 10px 20px;
+	border-radius: 10px;
+}
+#aside{
+	padding: 0 20px 20px 20px;
+	border-radius: 20px;
+}
+
+#titulo{
+	margin: 18px auto;
+	text-shadow: 1px 1px 1px black;
+	font-size: 2em;
+}
+
+.material-icons{
+	font-size: 20px;
+}
+
+h4{
+	font-size: 1em;
+	font-weight: bold;
+}
+#aside{
+	margin-top: 20px;
+}
+blockquote ul{
+	margin: 30px 10px;
+	line-height: 1.5;
+	color: black;
+	font-weight: bold;
+	text-shadow: 1px 1px 2px #69F0AE;
+}
+blockquote ul li{
+	margin-top: 15px;
+}
+
+
+blockquote{
+	border-left: 5px solid #69F0AE !important;
+}
+
+h1{
+	font-size: 3em;
+	font-weight: bold; 
+}
+
+h3{
+	font-size: 2em;
+	font-weight: bold;
+}
+
+img{
+	margin-top: 20px !important;
+	display: block;
+	margin: auto;
+}
+
+h5{
+	font-size: 1.2em;
+	font-weight: bold;
+}
