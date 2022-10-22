@@ -1,11 +1,18 @@
 
-// console.log(console.log('Hola Mundo'));
+let a = 10,
+    b = 20,
+    c = 'Hola ',
+    d = 'Spiderman', 
+    x = a + b;
 
-let a = 10; // Variable
-var b = 10; // Ya no se usa
-const c = 10; // Constante, no se puede reasignar
+/*
+    console.log('%c Mis variables', 'color: blue; font-weight: bold')
+    console.log({ a });
+    console.log({ b });
+    console.log({ c });
+*/
 
-/**
- * Polyfill Es un código que provee el funcionamiento de una nueva característica de javascript ES6, en versiones viejas como ES5
- */
+// console.table({a, b, c, d, x});
+
+const saludo = c + d;
 
