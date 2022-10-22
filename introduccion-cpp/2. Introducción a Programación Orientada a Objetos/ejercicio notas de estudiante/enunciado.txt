@@ -1,0 +1,8 @@
+
+
+1. Desarrole una clase que maneje un arreglo de 6 notas de un alumno entre 0 y 20 y en varios metodos permita:
+- Mostrar cuál fue la mayor nota que obtuvo
+- Cuántas notas aprobó
+- El índice de eficiencia del alumno (entre 0 y 1)
+- El promedio de notas que tiene el alumno
+

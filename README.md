@@ -1,2 +1,6 @@
-# cursos
-Repositorio que contendrá todos los cursos que he hecho
+# Cursos
+Repositorio para todos los cursos en proceso y finalizados que estoy realizando.
+
+## Listado
+- Python (en proceso).
+- Introducción a C++ (finalizado).

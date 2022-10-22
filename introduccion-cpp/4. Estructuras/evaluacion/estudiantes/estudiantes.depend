@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1605656306 source:d:\uni\c++\estructuras\evaluacion\estudiantes\estudiantes.cpp
+	"estudiantes.h"
+	<iostream>
+
+1605656146 d:\uni\c++\estructuras\evaluacion\estudiantes\estudiantes.h
+	<string>
+

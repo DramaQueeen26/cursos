@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1605075903 source:c:\users\ramsés melendez\desktop\c++\cartesiano\main.cpp
+	"Cartesiano.h"
+	<iostream>
+
+1605075820 c:\users\ramsés melendez\desktop\c++\cartesiano\cartesiano.h
+
+1605075995 source:c:\users\ramsés melendez\desktop\c++\cartesiano\cartesiano.cpp
+	"Cartesiano.h"
+	<math.h>
+	<iostream>
+

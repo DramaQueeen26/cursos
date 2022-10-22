@@ -1,0 +1,9 @@
+
+
+2. Desarrole una clase que maneje el monto de ventas de una tienda en todos los dias durante cuatro semanas y que me permita:
+- Mostrar cuántos días no hubo ventas
+- Mostrar el promedio de ventas en las 4 semanas
+- Calcular cuál fue el mejor día en ventas
+- Buscar en qué día(s) hubo ventas por debajo de 80 $
+
+Al igual que el programa anterior, al momento de ingresar los montos diarios de ventas, deben validarse los valores

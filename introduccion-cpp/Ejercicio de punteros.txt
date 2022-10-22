@@ -1,0 +1,161 @@
+/*Ejercicio de punteros*/
+
+Lista.h
+
+#include <string>
+using namespace std;
+
+struct nodo {
+    int ci, edad;
+    string nombre;
+    nodo *siguiente;
+};
+
+class Lista
+{
+    private:
+        nodo *primero;
+    public:
+        Lista();
+        ~Lista();
+        void incluir(int, int, int, string);
+        void eliminar(string, int);
+        void mostrar_datos();
+};
+
+Lista.cpp
+
+#include "Lista.h"
+#include <iostream>
+#include <string>
+using namespace std;
+
+Lista::Lista()
+{
+    primero = NULL;
+}
+
+void Lista::incluir(int ci_referencia, int ci, int edad, string nombre) {
+
+    nodo *auxiliar = primero;
+    int numero = 1;
+    int numero2 = 1;
+
+    if(primero == NULL){
+        nodo *nuevo = new nodo;
+        nuevo->ci = ci;
+        nuevo->edad = edad;
+        nuevo->nombre = nombre;
+        nuevo->siguiente = NULL;
+        primero = nuevo;
+    }else{
+
+        while (auxiliar->siguiente != NULL && auxiliar->ci != ci_referencia){
+            auxiliar = auxiliar->siguiente;
+            numero++;
+        }
+
+        if(auxiliar->ci == ci_referencia){
+            if(numero == 1){
+                nodo *nuevo = new nodo;
+                nuevo->ci = ci;
+                nuevo->edad = edad;
+                nuevo->nombre = nombre;
+                nuevo->siguiente = primero;
+                primero = nuevo;
+            }else{
+                nodo *auxiliar2 = primero;
+                while((auxiliar2->siguiente != NULL) && (numero2 != (numero - 1))){
+                    auxiliar2 = auxiliar2->siguiente;
+                    numero2++;
+                }
+                if(numero2 == (numero - 1)){
+                    nodo *nuevo = new nodo;
+                    nuevo->ci = ci;
+                    nuevo->edad = edad;
+                    nuevo->nombre = nombre;
+                    nuevo->siguiente = auxiliar2->siguiente;
+                    auxiliar2->siguiente = nuevo;
+                }
+            }
+
+
+
+        }
+    }
+
+
+}
+
+
+void Lista::mostrar_datos() {
+    nodo *auxiliar = primero;
+    cout << endl;
+    while (auxiliar != NULL) {
+        if(auxiliar->edad < 30){
+            cout << "Nombre: " << auxiliar->nombre << " Edad: " << auxiliar->edad << " Cédula: " << auxiliar->ci;
+            cout << endl;
+        }
+        auxiliar = auxiliar->siguiente;
+    }
+    cout << endl;
+}
+
+void Lista::eliminar(string nombre, int edad) {
+    nodo *auxiliar = primero;
+
+        if(auxiliar != NULL){
+
+            while((auxiliar != NULL) && (auxiliar->nombre != nombre) && (auxiliar->edad != edad)){
+                auxiliar = auxiliar->siguiente;
+            }
+
+            if(auxiliar-> nombre == nombre && auxiliar->edad == edad){
+                    int numero = 0;
+                    while(auxiliar->siguiente != NULL && numero <= 1){
+                        auxiliar = auxiliar->siguiente;
+                        numero++;
+                    }
+
+                if(auxiliar->siguiente != NULL){
+                    nodo *posterior = auxiliar->siguiente;
+                    auxiliar->siguiente = posterior->siguiente;
+                    delete posterior;
+                }
+            }
+        }
+}
+
+
+Lista::~Lista()
+{
+    nodo *auxiliar = primero;
+    while (auxiliar!= NULL) {
+        nodo *actual = auxiliar;
+        auxiliar = auxiliar->siguiente;
+        delete actual;
+    }
+    primero = NULL;
+}
+
+
+main.cpp
+
+#include <iostream>
+#include "Lista.h"
+using namespace std;
+
+Lista x;
+
+int main()
+{
+    setlocale(0,"SPANISH");
+      x.incluir(28454829, 28454829, 18, "Lucia");
+      x.incluir(28454829, 13603033, 42, "Maria");
+      x.incluir(28454829, 33126061, 11, "Andres");
+      x.incluir(33126061, 13603346, 42, "Jose");
+      x.mostrar_datos();
+      x.eliminar("Maria", 42);
+      x.mostrar_datos();
+    return 0;
+}

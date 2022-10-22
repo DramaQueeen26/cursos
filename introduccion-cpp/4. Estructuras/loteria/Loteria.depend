@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1605572133 source:c:\users\ramsés melendez\desktop\c++\loteria\main.cpp
+	"Loteria.h"
+	<iostream>
+
+1605572148 source:c:\users\ramsés melendez\desktop\c++\loteria\src\loteria.cpp
+	"Loteria.h"
+	<iostream>
+
+1605550640 c:\users\ramsés melendez\desktop\c++\loteria\include\loteria.h
+

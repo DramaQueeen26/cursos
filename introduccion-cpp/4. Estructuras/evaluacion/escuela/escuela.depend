@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1611865220 source:d:\uni\c++\estructuras\evaluacion\escuela\main.cpp
+	"escuela.h"
+	<iostream>
+	<string>
+
+1611861498 d:\uni\c++\estructuras\evaluacion\escuela\escuela.h
+	<string>
+
+1611865170 source:d:\uni\c++\estructuras\evaluacion\escuela\escuela.cpp
+	"escuela.h"
+	<iostream>
+
