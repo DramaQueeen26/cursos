@@ -1,0 +1,1 @@
+<h2>Este es el catalogo <?php echo $numero?></h2>
