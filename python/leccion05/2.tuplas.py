@@ -16,3 +16,15 @@ print(frutas[-1])
 # acceder a un rango de valores
 print(frutas[0:2]) # sin incluir el último índice
 
+# recorrer elementos
+for fruta in frutas:
+    print(fruta, end=' ')
+
+#cambiar valor de la tupla
+# frutas[0] = 'Pera'
+
+# convertir una tupla a lista para poder cambiar el valor
+# pero como el video no se ve completo
+
+
+
