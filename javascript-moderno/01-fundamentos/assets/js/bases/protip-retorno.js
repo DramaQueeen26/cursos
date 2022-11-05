@@ -14,6 +14,7 @@ function imprimeArgumentos() {
     console.log( arguments );
 }
 
+// Parámetro rest (NO ES LO MISMO QUE EL OPERADOR SPREAD)
 const imprimeArgumentos2 = ( edad, ...args ) => {
     // console.log({ edad, args });
     return args;
